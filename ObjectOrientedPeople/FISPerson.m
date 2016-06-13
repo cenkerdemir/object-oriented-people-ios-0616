@@ -14,6 +14,7 @@
 @property (readwrite) NSUInteger ageInYears;
 @property (readwrite) NSUInteger heightInInches;
 @property (strong, readwrite) NSMutableArray *skills;
+@property (nonatomic,readwrite) BOOL isQualifiedTutor;
 
 @end
 
@@ -41,6 +42,15 @@
         _skills = [[NSMutableArray alloc] init];
     }
     return self;
+}
+
+-(BOOL)isQualifiedTutor {
+    if ([self.skills count] >= 4) {
+        return YES;
+    }
+    else {
+        return NO;
+    }
 }
 
 -(NSString *)celebrateBirthday {
@@ -152,14 +162,14 @@
 
 */
 
--(BOOL)isQualifiedTutor {
-    if ([self.skills count] >= 4) {
-        return YES;
-    }
-    else {
-        return NO;
-    }
-}
+//-(BOOL)isQualifiedTutor {
+//    if ([self.skills count] >= 4) {
+//        return YES;
+//    }
+//    else {
+//        return NO;
+//    }
+//}
 
 
 @end

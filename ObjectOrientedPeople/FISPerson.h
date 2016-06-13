@@ -14,6 +14,8 @@
 @property (readonly) NSUInteger ageInYears;
 @property (readonly) NSUInteger heightInInches;
 @property (strong, readonly) NSMutableArray *skills;
+@property (nonatomic,readonly) BOOL isQualifiedTutor;
+
 
 -(instancetype) init;
 -(instancetype) initWithName:(NSString *)name
@@ -27,6 +29,6 @@
 -(void)learnSkillObjectiveC;
 -(void)learnSkillObjectOrientedProgramming;
 -(void)learnSkillInterfaceBuilder;
--(BOOL)isQualifiedTutor;
+//-(BOOL)isQualifiedTutor;
 
 @end
